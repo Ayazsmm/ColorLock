@@ -64,11 +64,9 @@ public class LockScreenActivity extends Activity{
 	}
 
 	@Override
-	public void onResume()
-	{
+	public void onResume() {
 		super.onResume();
-		if(isPaused)
-		{
+		if(isPaused) {
 			finish();
 			Intent tmpInt = new Intent(this, LockScreenActivity.class);
 			startActivity(tmpInt);
@@ -77,12 +75,19 @@ public class LockScreenActivity extends Activity{
 	}
 	
 	@Override
-	public void onPause()
-	{
+	public void onPause() {
 		super.onPause();
 		isPaused = true;
 	}
-	
+
+	@Override
+	protected void onStop() {
+		super.onStop();
+		finish();
+		Intent tmpInt = new Intent(this, LockScreenActivity.class);
+		startActivity(tmpInt);
+	}
+
 	//on Circls clicked
     public void onCircleClick(View v) throws IOException
     {
