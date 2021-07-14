@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ColorLock</string>
+    <string name="title_activity_main">AdvanceLock</string>
+    <string name="title_activity_first">FirstActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+</resources>

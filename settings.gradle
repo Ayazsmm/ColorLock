@@ -1,0 +1,2 @@
+rootProject.name = "Advance Lock"
+include ':app'
