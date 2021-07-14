@@ -42,24 +42,7 @@ public class MainActivity extends Activity {
         i = new Intent(MainActivity.this, ScreenOnService.class);
 
         stopService(i);
-       /* if(sp.getString("email", "null").equals("null")){
-        	AlertDialog.Builder build = new AlertDialog.Builder(this);
-        	build.setTitle("Pattern");
-        	build.setMessage("Enter your Mail Id: \n(Pattern will be sent to this id)");
-        	email = new EditText(this);
-        	build.setView(email);
-        	build.setPositiveButton("Confirm", new OnClickListener()
-        	{
-        		public void onClick(DialogInterface dialog, int which) {
-    				// TODO Auto-generated method stub
-    				edi.putString("email", email.getText().toString());
-    				edi.commit();
-    				dialog.dismiss();
-    			}
-        	});
-        	build.create();
-        	build.show();
-        }*/
+
     }
 
     //on Circls clicked
@@ -142,10 +125,8 @@ public class MainActivity extends Activity {
     	}
     	if(tmp == 6)
     	{
-    		//GMailSender sender = new GMailSender();
-    		//sender.sendMail(sp.getString("email", ""), strPatt);
     		spEdi.commit();
-    		
+
     		Toast.makeText(getApplicationContext(), "Pattern Saved", Toast.LENGTH_SHORT).show();
 			startService(i);
     		

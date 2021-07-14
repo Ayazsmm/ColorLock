@@ -12,6 +12,14 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.AdvanceLock.FirstActivity" parent="Theme.AdvanceLock"/>
+
+    <style name="Theme.AdvanceLock.MainActivity" parent="Theme.AdvanceLock"/>
+
+    <style name="Theme.AdvanceLock.LockScreenActivity" parent="Theme.AdvanceLock">
         <item name="android:windowFullscreen">true</item>
     </style>
+
 </resources>

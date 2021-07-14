@@ -9,6 +9,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -28,21 +29,13 @@ public class LockScreenActivity extends Activity{
 	ImageView tmpIv;
 	InputStream is;
 	public static final String PASS = "PassFile";
-	KeyguardManager km;
-	@SuppressWarnings("deprecation")
-	KeyguardManager.KeyguardLock kl;
-	
-	@SuppressWarnings("deprecation")
+
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lockscreen);
 
 		Log.d("ScreenOnReceiver", "onCreate");
-        
-        km = (KeyguardManager) getSystemService(Context.KEYGUARD_SERVICE);
-        kl = km.newKeyguardLock(KEYGUARD_SERVICE);
-        kl.disableKeyguard();
         
         TextView tmpTxt = (TextView) findViewById(R.id.txtTime);
         tmpTxt.setText(android.text.format.DateFormat.format("hh:mmaa", new java.util.Date()).toString());
@@ -55,18 +48,21 @@ public class LockScreenActivity extends Activity{
     }
 	
 	@Override
-	public void onAttachedToWindow()
-	{
-		 //this.getWindow().setType(WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG);
+	public void onAttachedToWindow() {
+		//this.getWindow().setType(WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG);
 		super.onAttachedToWindow();
 	}
 	
 	@Override
-	public void onBackPressed()
-	{
+	public void onBackPressed() {
 		
 	}
-	
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		return false;
+	}
+
 	@Override
 	public void onResume()
 	{
@@ -136,10 +132,7 @@ public class LockScreenActivity extends Activity{
     		tmpValid = tmpValid + 1;
     	
     	if(tmpValid == 6)
-    	{
-    		kl.reenableKeyguard();
     		finish();
-    	}
     	else
     		Toast.makeText(getApplicationContext(), "Pattern Mismatch, Please try again", Toast.LENGTH_SHORT).show();
     }
