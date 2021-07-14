@@ -1,7 +1,9 @@
 <resources>
-    <string name="app_name">ColorLock</string>
-    <string name="title_activity_main">AdvanceLock</string>
-    <string name="title_activity_first">FirstActivity</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">Color Lock</string>
+    <string name="home_screen_info_txt">Color lock provides you a new and secure way to lock and unlock your phone. It also saves you from Eavesdropping Attacks the number one form of cyber attack on phones.</string>
+    <string name="start_btn_txt">Get started</string>
+    <string name="set_lock_info_txt">Click on each circle to change the color multiple click will the change color multiple times once you are happy with the pattern save it and next time you open your phone enter the same pattern</string>
+    <string name="set_lock_btn_text">Save pattern</string>
+    <string name="unlock_page_footer_txt">Improved Authentication System for Android</string>
+    <string name="unlock_btn_txt">Unlock</string>
 </resources>

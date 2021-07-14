@@ -28,6 +28,8 @@ public class MainActivity extends Activity {
 	SharedPreferences sp;
 	SharedPreferences.Editor edi;
 	EditText email;
+
+	Intent i;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,10 @@ public class MainActivity extends Activity {
         
         sp = getSharedPreferences(PASS, 0);
         edi = sp.edit();
+
+        i = new Intent(MainActivity.this, ScreenOnService.class);
+
+        stopService(i);
        /* if(sp.getString("email", "null").equals("null")){
         	AlertDialog.Builder build = new AlertDialog.Builder(this);
         	build.setTitle("Pattern");
@@ -141,8 +147,6 @@ public class MainActivity extends Activity {
     		spEdi.commit();
     		
     		Toast.makeText(getApplicationContext(), "Pattern Saved", Toast.LENGTH_SHORT).show();
-
-			Intent i = new Intent(MainActivity.this, ScreenOnService.class);
 			startService(i);
     		
     	}

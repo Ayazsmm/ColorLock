@@ -2,18 +2,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bc"
     android:padding="5dp" >
 
     <Button
-        android:id="@+id/btnSet"
+        android:id="@+id/btn_unlock"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/txtSc"
-        android:layout_marginBottom="10dp"
-        android:onClick="onUnlock"
-        android:background="@drawable/ul"
-        />
+        android:layout_margin="16dp"
+        android:textAllCaps="false"
+        android:text="@string/unlock_btn_txt"
+        android:onClick="onUnlock" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,19 +29,19 @@
 
             <ImageView
                 android:id="@+id/imgOne"
-                android:layout_width="64px"
-                android:layout_height="64px"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:padding="10dp"
                 android:onClick="onCircleClick"
-                android:padding="5dp"
                 android:src="@drawable/def"
                 android:tag="zero" />
 
             <ImageView
                 android:id="@+id/imgTwo"
-                android:layout_width="64px"
-                android:layout_height="64px"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:padding="10dp"
                 android:onClick="onCircleClick"
-                android:padding="5dp"
                 android:src="@drawable/def"
                 android:tag="zero" />
         </LinearLayout>
@@ -55,24 +54,24 @@
 
             <ImageView
                 android:id="@+id/imgThree"
-                android:layout_width="64px"
-                android:layout_height="64px"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:padding="10dp"
                 android:onClick="onCircleClick"
-                android:padding="5dp"
                 android:src="@drawable/def"
                 android:tag="zero" />
 
             <View
-                android:layout_width="64px"
-                android:layout_height="64px"
-                android:padding="5dp" />
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:padding="10dp" />
 
             <ImageView
                 android:id="@+id/imgFour"
-                android:layout_width="64px"
-                android:layout_height="64px"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:padding="10dp"
                 android:onClick="onCircleClick"
-                android:padding="5dp"
                 android:src="@drawable/def"
                 android:tag="zero" />
         </LinearLayout>
@@ -85,19 +84,19 @@
 
             <ImageView
                 android:id="@+id/imgFive"
-                android:layout_width="64px"
-                android:layout_height="64px"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:padding="10dp"
                 android:onClick="onCircleClick"
-                android:padding="5dp"
                 android:src="@drawable/def"
                 android:tag="zero" />
 
             <ImageView
                 android:id="@+id/imgSix"
-                android:layout_width="64px"
-                android:layout_height="64px"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:padding="10dp"
                 android:onClick="onCircleClick"
-                android:padding="5dp"
                 android:src="@drawable/def"
                 android:tag="zero" />
         </LinearLayout>
@@ -108,20 +107,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
         android:text="00:00"
-        android:textSize="15pt"
+        android:textSize="28sp"
         android:textColor="#ff228b22" />
 
     <TextView
         android:id="@+id/txtDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtTime"
         android:layout_below="@+id/txtTime"
-        android:layout_margin="5dp"
         android:text="00:00"
-        android:textSize="10pt"
+        android:textSize="18sp"
         android:textColor="#ffb22222" />
 
     <TextView
@@ -131,12 +127,12 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:text="00:00"
-        android:textSize="8pt"
+        android:textSize="16sp"
         android:textColor="#ffb22222" />
     
     <TextView
         android:id="@+id/txtSc"
-        android:text="Improved Authentication System for Android" 
+        android:text="@string/unlock_page_footer_txt"
         android:singleLine="true" 
         android:ellipsize="marquee" 
         android:marqueeRepeatLimit="marquee_forever" 
@@ -146,6 +142,6 @@
         android:layout_width="wrap_content" 
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
 		android:textColor="#ff228b22"/>
 </RelativeLayout>

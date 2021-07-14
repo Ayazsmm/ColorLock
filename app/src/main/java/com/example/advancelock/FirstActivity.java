@@ -13,7 +13,7 @@ Button ezhil;
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_first);
-		ezhil=(Button) findViewById(R.id.main);
+		ezhil=(Button) findViewById(R.id.btn_start);
 		ezhil.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {

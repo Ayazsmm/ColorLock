@@ -6,11 +6,14 @@
     <Button
         android:id="@+id/btnSet"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:background="@drawable/sc"
-        android:onClick="onSave" />
+        android:onClick="onSave"
+        android:text="@string/set_lock_btn_text"
+        android:textAllCaps="false"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,18 +31,18 @@
             <ImageView
                 android:id="@+id/imgOne"
                 android:tag="zero"
-                android:layout_width="64px"
-                android:layout_height="64px"
-                android:padding="5dp"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:padding="10dp"
                 android:src="@drawable/def"
                 android:onClick="onCircleClick" />
 
             <ImageView
                 android:id="@+id/imgTwo"
                 android:tag="zero"
-                android:layout_width="64px"
-                android:layout_height="64px"
-                android:padding="5dp"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:padding="10dp"
                 android:src="@drawable/def"
                 android:onClick="onCircleClick" />
         </LinearLayout>
@@ -53,24 +56,24 @@
             <ImageView
                 android:id="@+id/imgThree"
                 android:tag="zero"
-                android:layout_width="64px"
-                android:layout_height="64px"
-                android:padding="5dp"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:padding="10dp"
                 android:src="@drawable/def"
                 android:onClick="onCircleClick" />
 
             <View
-                android:layout_width="64px"
-                android:layout_height="64px"
-                android:padding="5dp"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:padding="10dp"
                 android:onClick="onClick" />
 
             <ImageView
                 android:id="@+id/imgFour"
                 android:tag="zero"
-                android:layout_width="64px"
-                android:layout_height="64px"
-                android:padding="5dp"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:padding="10dp"
                 android:src="@drawable/def"
                 android:onClick="onCircleClick" />
         </LinearLayout>
@@ -84,33 +87,32 @@
             <ImageView
                 android:id="@+id/imgFive"
                 android:tag="zero"
-                android:layout_width="64px"
-                android:layout_height="64px"
-                android:padding="5dp"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:padding="10dp"
                 android:src="@drawable/def"
                 android:onClick="onCircleClick" />
 
             <ImageView
                 android:id="@+id/imgSix"
                 android:tag="zero"
-                android:layout_width="64px"
-                android:layout_height="64px"
-                android:padding="5dp"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:padding="10dp"
                 android:src="@drawable/def"
                 android:onClick="onCircleClick" />
         </LinearLayout>
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView1"
-        android:padding="5dp"
+        android:id="@+id/tv_setlock_info"
         android:gravity="center"
-        android:background="@drawable/header"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:layout_alignParentTop="true"
-        android:text="Set Your Pattern"
-        android:textColor="#000000"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:text="@string/set_lock_info_txt"
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
 
 </RelativeLayout>
